@@ -1,0 +1,409 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="http://xmlns.jcp.org/xml/ns/javaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="http://xmlns.jcp.org/xml/ns/javaee http://xmlns.jcp.org/xml/ns/javaee/web-app_4_0.xsd"
+         version="4.0">
+
+
+    <!--  这里是登录功能  -->
+    <servlet>
+        <servlet-name>login</servlet-name>
+        <servlet-class>com.zzx.servlet.LoginServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>login</servlet-name>
+        <url-pattern>/user/login</url-pattern>
+    </servlet-mapping>
+    <!--  这里是注册功能  -->
+    <servlet>
+        <servlet-name>SignIn</servlet-name>
+        <servlet-class>com.zzx.servlet.user.SignInServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>SignIn</servlet-name>
+        <url-pattern>/user/SignIn</url-pattern>
+    </servlet-mapping>
+<!--  **************************************************   House   ************************************************************  -->
+    <!--  这里是house表的查全部的功能  -->
+    <servlet>
+        <servlet-name>houseShow</servlet-name>
+        <servlet-class>com.zzx.servlet.house.HouseShowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>houseShow</servlet-name>
+        <url-pattern>/user/house/show</url-pattern>
+    </servlet-mapping>
+    <!--  这里是house表的添加单条数据功能  -->
+    <servlet>
+        <servlet-name>houseadd</servlet-name>
+        <servlet-class>com.zzx.servlet.house.HouseAddOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>houseadd</servlet-name>
+        <url-pattern>/user/house/add</url-pattern>
+    </servlet-mapping>
+    <!--  这里是house表的删除单条数据功能  -->
+    <servlet>
+        <servlet-name>houseDeleteOne</servlet-name>
+        <servlet-class>com.zzx.servlet.house.DeleteOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>houseDeleteOne</servlet-name>
+        <url-pattern>/user/house/deleteone</url-pattern>
+    </servlet-mapping>
+    <!--  这里是house表的修改单条数据功能  -->
+    <servlet>
+        <servlet-name>houseUpdate</servlet-name>
+        <servlet-class>com.zzx.servlet.house.HouseByIdServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>houseUpdate</servlet-name>
+        <url-pattern>/user/house/update</url-pattern>
+    </servlet-mapping>
+<!--  **************************************************   Contract   ************************************************************  -->
+    <!--  这是Contract的查询全部 -->
+    <servlet>
+        <servlet-name>ContractSelectAll</servlet-name>
+        <servlet-class>com.zzx.servlet.contract.ContractServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContractSelectAll</servlet-name>
+        <url-pattern>/user/contract/selectall</url-pattern>
+    </servlet-mapping>
+    <!--  这是Contract的添加单条数据 -->
+    <servlet>
+        <servlet-name>ContractAdd</servlet-name>
+        <servlet-class>com.zzx.servlet.contract.AddOne</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ContractAdd</servlet-name>
+        <url-pattern>/user/contract/add</url-pattern>
+    </servlet-mapping>
+    <!--  这是Contract的删除单条数据 -->
+    <servlet>
+        <servlet-name>Cdelete</servlet-name>
+        <servlet-class>com.zzx.servlet.contract.DeleteOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Cdelete</servlet-name>
+        <url-pattern>/user/contract/deleteone</url-pattern>
+    </servlet-mapping>
+
+    <servlet>
+        <servlet-name>Cupdate</servlet-name>
+        <servlet-class>com.zzx.servlet.contract.UpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>Cupdate</servlet-name>
+        <url-pattern>/user/contract/update</url-pattern>
+    </servlet-mapping>
+
+    <!--  **************************************************   Lessee   ************************************************************  -->
+    <!--  这是Lessee的查询全部 -->
+    <servlet>
+        <servlet-name>LesseeShow</servlet-name>
+        <servlet-class>com.zzx.servlet.lessee.LesseeSelectAllServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LesseeShow</servlet-name>
+        <url-pattern>/user/lessee/selectall</url-pattern>
+    </servlet-mapping>
+    <!--  这是Lessee的删除单条数据 -->
+    <servlet>
+        <servlet-name>LesseeDeleteOne</servlet-name>
+        <servlet-class>com.zzx.servlet.lessee.LesseeDeleteOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LesseeDeleteOne</servlet-name>
+        <url-pattern>/user/lessee/deleteone</url-pattern>
+    </servlet-mapping>
+    <!--  这是Lessee的添加单条数据 -->
+    <servlet>
+        <servlet-name>LesseeAddOne</servlet-name>
+        <servlet-class>com.zzx.servlet.lessee.LesseeAddOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LesseeAddOne</servlet-name>
+        <url-pattern>/user/lessee/addone</url-pattern>
+    </servlet-mapping>
+    <!--  这是Lessee的修改单条数据 -->
+    <servlet>
+        <servlet-name>LesseeUpdateOne</servlet-name>
+        <servlet-class>com.zzx.servlet.lessee.LesseeUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LesseeUpdateOne</servlet-name>
+        <url-pattern>/user/lessee/update</url-pattern>
+    </servlet-mapping>
+
+    <!--  **************************************************   Lessee   ************************************************************  -->
+    <!--  这是Rent的查询全部 -->
+    <servlet>
+        <servlet-name>RentShow</servlet-name>
+        <servlet-class>com.zzx.servlet.rent.RentSelectAll</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RentShow</servlet-name>
+        <url-pattern>/user/rent/selectall</url-pattern>
+    </servlet-mapping>
+    <!--  这是Rent的添加单条数据 -->
+    <servlet>
+        <servlet-name>RentAddOne</servlet-name>
+        <servlet-class>com.zzx.servlet.rent.RentAddOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RentAddOne</servlet-name>
+        <url-pattern>/user/rent/add</url-pattern>
+    </servlet-mapping>
+    <!--  这里是删除  -->
+    <servlet>
+        <servlet-name>RentDeleteOne</servlet-name>
+        <servlet-class>com.zzx.servlet.rent.RentDeleteOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RentDeleteOne</servlet-name>
+        <url-pattern>/user/rent/deleteone</url-pattern>
+    </servlet-mapping>
+    <!--  这里是修改  -->
+    <servlet>
+        <servlet-name>RentUpdate</servlet-name>
+        <servlet-class>com.zzx.servlet.rent.RentUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RentUpdate</servlet-name>
+        <url-pattern>/user/rent/update</url-pattern>
+    </servlet-mapping>
+
+
+    <!--  **************************************************   Lessee   ************************************************************  -->
+    <!--  这是Logi的查询全部 -->
+    <servlet>
+        <servlet-name>LogiShow</servlet-name>
+        <servlet-class>com.zzx.servlet.logi.LogiSelectAllServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogiShow</servlet-name>
+        <url-pattern>/user/logi/selectall</url-pattern>
+    </servlet-mapping>
+    <!--  这是Logi的添加单条数据 -->
+    <servlet>
+        <servlet-name>LogiAddOne</servlet-name>
+        <servlet-class>com.zzx.servlet.logi.LogiAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogiAddOne</servlet-name>
+        <url-pattern>/user/logi/add</url-pattern>
+    </servlet-mapping>
+    <!--  这是Logi的添加单条数据 -->
+    <servlet>
+        <servlet-name>LogiDeleteOne</servlet-name>
+        <servlet-class>com.zzx.servlet.logi.LogiDeleteOneServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogiDeleteOne</servlet-name>
+        <url-pattern>/user/logi/delete</url-pattern>
+    </servlet-mapping>
+    <!--  这是Logi的添加单条数据 -->
+    <servlet>
+        <servlet-name>LogiUpdate</servlet-name>
+        <servlet-class>com.zzx.servlet.logi.LogiUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>LogiUpdate</servlet-name>
+        <url-pattern>/user/logi/update</url-pattern>
+    </servlet-mapping>
+
+    <!--  **************************************************   Maintain   ************************************************************  -->
+    <!--  这是Maintain的查询全部 -->
+    <servlet>
+        <servlet-name>MaintainShow</servlet-name>
+        <servlet-class>com.zzx.servlet.maintain.MaintainListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MaintainShow</servlet-name>
+        <url-pattern>/user/maintain/selectall</url-pattern>
+    </servlet-mapping>
+    <!--  这是Maintain的删除单条数据 -->
+    <servlet>
+        <servlet-name>MaintainDelete</servlet-name>
+        <servlet-class>com.zzx.servlet.maintain.MaintainDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MaintainDelete</servlet-name>
+        <url-pattern>/user/maintain/deleteone</url-pattern>
+    </servlet-mapping>
+
+    <!--  这是Maintain的添加单条数据 -->
+    <servlet>
+        <servlet-name>MaintainAdd</servlet-name>
+        <servlet-class>com.zzx.servlet.maintain.MaintainAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MaintainAdd</servlet-name>
+        <url-pattern>/user/maintain/add</url-pattern>
+    </servlet-mapping>
+
+    <!--  这是Maintain的修改单条数据 -->
+    <servlet>
+        <servlet-name>MaintainUpdate</servlet-name>
+        <servlet-class>com.zzx.servlet.maintain.MaintainUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>MaintainUpdate</servlet-name>
+        <url-pattern>/user/maintain/update</url-pattern>
+    </servlet-mapping>
+
+<!--  **************************************************   Activity   ************************************************************  -->
+    <!--  这是Activity的查询全部 -->
+    <servlet>
+        <servlet-name>ActivityShow</servlet-name>
+        <servlet-class>com.zzx.servlet.activity.ActivityListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ActivityShow</servlet-name>
+        <url-pattern>/user/activity/selectall</url-pattern>
+    </servlet-mapping>
+    <!--  这是Activity的删除单条数据 -->
+    <servlet>
+        <servlet-name>ActivityDelete</servlet-name>
+        <servlet-class>com.zzx.servlet.activity.ActivityDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ActivityDelete</servlet-name>
+        <url-pattern>/user/activity/deleteone</url-pattern>
+    </servlet-mapping>
+
+    <!--  这是Activity的添加单条数据 -->
+    <servlet>
+        <servlet-name>ActivityAdd</servlet-name>
+        <servlet-class>com.zzx.servlet.activity.ActivityAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ActivityAdd</servlet-name>
+        <url-pattern>/user/activity/add</url-pattern>
+    </servlet-mapping>
+
+    <!--  这是Activity的修改单条数据 -->
+    <servlet>
+        <servlet-name>ActivityUpdate</servlet-name>
+        <servlet-class>com.zzx.servlet.activity.ActivityUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ActivityUpdate</servlet-name>
+        <url-pattern>/user/activity/update</url-pattern>
+    </servlet-mapping>
+
+    <!--  **************************************************   Role   ************************************************************  -->
+    <!--  这是Role的查询全部 -->
+    <servlet>
+        <servlet-name>RoleShow</servlet-name>
+        <servlet-class>com.zzx.servlet.role.RoleListServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoleShow</servlet-name>
+        <url-pattern>/user/role/selectall</url-pattern>
+    </servlet-mapping>
+    <!--  这是Role的删除单条数据 -->
+    <servlet>
+        <servlet-name>RoleDelete</servlet-name>
+        <servlet-class>com.zzx.servlet.role.RoleDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoleDelete</servlet-name>
+        <url-pattern>/user/role/deleteone</url-pattern>
+    </servlet-mapping>
+
+    <!--  这是Role的添加单条数据 -->
+    <servlet>
+        <servlet-name>RoleAdd</servlet-name>
+        <servlet-class>com.zzx.servlet.role.RoleAddServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoleAdd</servlet-name>
+        <url-pattern>/user/role/add</url-pattern>
+    </servlet-mapping>
+
+    <!--  这是Role的修改单条数据 -->
+    <servlet>
+        <servlet-name>RoleUpdate</servlet-name>
+        <servlet-class>com.zzx.servlet.role.RoleUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>RoleUpdate</servlet-name>
+        <url-pattern>/user/role/update</url-pattern>
+    </servlet-mapping>
+
+    <!--  **************************************************   User   ************************************************************  -->
+    <!--  这是User的查询全部 -->
+    <servlet>
+        <servlet-name>UserShow</servlet-name>
+        <servlet-class>com.zzx.servlet.user.UserShowServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserShow</servlet-name>
+        <url-pattern>/user/user/selectall</url-pattern>
+    </servlet-mapping>
+    <!--  这是User的删除单条数据 -->
+    <servlet>
+        <servlet-name>UserDelete</servlet-name>
+        <servlet-class>com.zzx.servlet.user.UserDeleteServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserDelete</servlet-name>
+        <url-pattern>/user/user/deleteone</url-pattern>
+    </servlet-mapping>
+    <!--  这是User的修改单条数据 -->
+    <servlet>
+        <servlet-name>UserUpdate</servlet-name>
+        <servlet-class>com.zzx.servlet.user.UserUpdateServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>UserUpdate</servlet-name>
+        <url-pattern>/user/user/update</url-pattern>
+    </servlet-mapping>
+
+
+<!--  **************************************************   拦截器   ************************************************************  -->
+    <!-- ======= EncodingFilter ======= -->
+    <filter>
+        <filter-name>EncodingFilter</filter-name>
+        <filter-class>com.zzx.filter.EncodingFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>EncodingFilter</filter-name>
+        <url-pattern>/*</url-pattern>
+    </filter-mapping>
+    <!-- ======= LoginFilter ======= -->
+    <filter>
+        <filter-name>LoginFilter</filter-name>
+        <filter-class>com.zzx.filter.LoginFilter</filter-class>
+    </filter>
+    <filter-mapping>
+        <filter-name>LoginFilter</filter-name>
+        <url-pattern>/user/*</url-pattern>
+    </filter-mapping>
+
+    <servlet>
+        <servlet-name>FallJsonServlet</servlet-name>
+        <servlet-class>com.zzx.servlet.FallJsonServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>FallJsonServlet</servlet-name>
+        <url-pattern>/FallJsonServlet</url-pattern>
+    </servlet-mapping>
+
+
+
+    <servlet>
+        <servlet-name>ExcelImportServlet</servlet-name>
+        <servlet-class>com.zzx.servlet.ExcelImportServlet</servlet-class>
+    </servlet>
+    <servlet-mapping>
+        <servlet-name>ExcelImportServlet</servlet-name>
+        <url-pattern>/ExcelImportServlet</url-pattern>
+    </servlet-mapping>
+
+
+</web-app>
+
