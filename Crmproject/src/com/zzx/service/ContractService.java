@@ -21,6 +21,7 @@ public interface ContractService {
     //修改
     Contract findContractById(int cid);
     void findUpdateById(Contract contract);
+    System.out.println("idea");
 
     //新写的查询全部.模糊查询,分页
     List<Contract> findAll(PageUtil pageUtil, HashMap<String,String> keywordMap);
