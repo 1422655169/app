@@ -20,7 +20,7 @@ public class ActivityAddServlet extends HttpServlet {
         // 设置编码格式
         req.setCharacterEncoding("utf-8");
         resp.setContentType("text/html;charset=utf-8");
-        System.out.println("gddddd);
+
         // 接收数据
         String atimes = req.getParameter("atime");
         String asubject = req.getParameter("asubject");
